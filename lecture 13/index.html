@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        /* Element Selector */
+        /* div{
+            background-color: red;
+        } */
+
+        /* Class Selector */
+        .red{
+            background-color: red;
+        } 
+
+        /* ID Selector */
+        #green{
+            background-color: green;
+        }
+
+        /* Child Selector */
+        div > p{
+            color: blue;
+            background-color: orangered;
+        }
+
+        /* Desendent Selector */
+        div p{
+            color: blue;
+            background-color: yellow;
+        }
+
+        /* Universal Selector */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Pseudo Selector */
+
+        /* if you have visited the link already then the colour of your link will changed to yellow */
+        a:visited{
+            color: blue;
+        }
+
+        /* If you haven't visited the link then the colour your link colour does not chage from green to yellow. */
+        a:link{
+            color: green;
+        }
+
+        /* When  you are clicking to a link then your colour will be red.*/
+        a:active{
+            background-color: red;
+        }
+        
+        /* when you hover or pointing cursor in your link it will show you yellow in your link. */
+        a:hover{
+            background-color: yellow;
+        }
+
+        p:first-child{
+            background-color: aqua;
+        }
+
+    </style>
+</head>
+<body>
+    <main class="one">
+        <p>I am first</p>
+        <p>I am second</p>
+    </main>
+
+    <div class="red">
+        I am a div
+
+        <!-- Here para is not not child of div its an decendent so here child selector will not work. so we have to create decendent selector. -->
+        <article>
+            <p>
+                I am a para inside div.
+            </p>
+        </article>
+    </div>
+
+    <div id="green">
+        I am another div.
+    </div>
+
+    <a href="https://www.google.com">Go to Google</a>
+    <br>
+    <a href="https://www.facebook.com">Go to Facebook</a>
+</body>
+</html>
