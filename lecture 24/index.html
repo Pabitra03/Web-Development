@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Float and Clear</title>
+    <style>
+        .cards{
+            border: 2px solid black;
+            display: flow-root;
+        }
+        img{
+            float: left;
+        }
+        .card{
+            border: 2px solid red;
+        }
+        .card:nth-child(3){
+            background-color: aqua;
+            /* clear:left; */
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="cards">
+        <img src="https://th.bing.com/th/id/R.152d188756261446a19c67785ddedb84?rik=0cZDKtqwB62Xhw&riu=http%3a%2f%2fwallpapercave.com%2fwp%2f9061Ujo.jpg&ehk=CdrD2I8L%2f7TFuOxqgrFD5xBHTVFSMu%2fUXB%2bJxoRUQcs%3d&risl=&pid=ImgRaw&r=0" alt="" width="230px">
+        <div class="card">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, assumenda? At voluptatem hic perferendis nesciunt dicta vero odit quidem aliquam. Dolorum inventore minus corrupti magnam exercitationem soluta est dolore facilis officia? Numquam, corrupti illo.</p>
+        </div>
+        <div class="card">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem quo, ex eveniet vitae totam temporibus, explicabo eaque ipsum ratione natus magnam nam. Soluta, in quae nesciunt porro odio officia tempora voluptate, perspiciatis sit eum ab recusandae, obcaecati at quidem iste? Quod repudiandae, consequuntur quas ullam provident doloremque esse maiores, assumenda eligendi ea aperiam ipsa, natus aspernatur nulla adipisci? Maxime, voluptatibus? Eveniet, quae! Odit eum asperiores aperiam, consequatur ratione fugiat deleniti, sed et architecto at labore hic porro aut consectetur. Recusandae est beatae iusto ipsa! Adipisci accusamus et doloribus cumque, cupiditate aperiam nihil voluptatem quisquam hic similique autem veniam illo laudantium sint iste pariatur facere? Suscipit iste sunt assumenda temporibus harum.</div>
+        <div class="card">Card 3</div>
+    </div>
+</body>
+
+</html>
