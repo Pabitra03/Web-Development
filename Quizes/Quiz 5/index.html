@@ -1,0 +1,63 @@
+<!-- Making a multi colours nav bar with using global variable -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 5</title>
+    <style>
+        /* From here we can change color of website*/
+        :root{
+            --primary-color:blueviolet;
+            --text-color:lightblue;
+            --secondary-color:rgb(8, 8, 8);
+        }
+        html,body{
+            background-color: var(--secondary-color);
+            height: 100%;
+        }
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        nav{
+            background-color:var(--primary-color);
+            padding: 16px 0px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            text-decoration: none;
+            
+            border: 2px solid black;
+        }
+        ul li{
+            color: var(--text-color);
+            list-style: none;
+            display: inline;
+            padding: 24px;
+            font-weight: bolder;
+        }
+        div{
+            color: white;
+            margin: 4px;
+            padding: 2px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact Us</li>
+                <li>Services</li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>
