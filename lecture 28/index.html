@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+
+    <!-- Don't use padding in flexbox and grid -->
+     <!-- Use gap(row-gap and column-gap) instead of padding -->
+
+    <style>
+        .container{
+            width: 80vw;
+            height: 80vh;
+            border: 2px solid rgb(0, 0, 0);
+            display: grid;
+
+            /* By using name */
+            /* grid-template-columns: [pahela]120px [doosra]100px [t]; */
+
+            /* fr is a grid unit it means fraction */
+            /* grid-template-columns: 1fr 2fr 1fr; */
+            /* grid-template-columns: repeat(4 , 1); */
+            /* grid-template-columns: repeat(4 , minmax(100px , 1fr)); */
+            grid-template-columns: repeat(4 , minmax(4 , 100px));
+            grid-template-rows: repeat(4, minmax(2 , 40px));
+            /* gap: 32px; */
+            row-gap: 34px;
+            column-gap: 10px;
+            /* grid-template-rows: 100px 100px 100px; */
+            /* justify-content: center; */
+            align-items: center;
+            place-content: center;
+
+        }
+        .item{
+            border: 2px solid red;
+            height: 55px;
+            width: 55px;
+        }
+        /* .item-4{ */
+            /* grid-row: 1/2; */
+            /* grid-column: pahela/t; */
+        /* } */
+        /* .item-1{ */
+            /* grid-row: 1/2; */
+            /* Or you can do this */
+            /* grid-row-start:1 ; */
+            /* grid-row-end: 2; */
+            /* grid-column: 1/2; */
+        /* } */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item-1">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item item-4">4</div>
+        <div class="item">5</div>
+    </div>
+</body>
+</html>

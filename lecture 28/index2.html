@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .container {
+            /* width: 80vw; */
+            border: 2px solid rgb(0, 0, 0);
+            display: grid;
+            grid-template-areas: "nav nav nav" "side article article" "footer footer footer";
+        }
+
+        .item {
+            border: 2px solid red;
+            height: 55px;
+            /* width: 55px; */
+        }
+        .item-1{
+            grid-area: nav;
+            background-color: aqua;
+        }
+        .item-2{
+            grid-area: side;
+            background-color: blue;
+        }
+        .item-3{
+            grid-area: article;
+            background-color: blueviolet;
+        }
+        .item-4{
+            grid-area: footer;
+            background-color: brown;
+        }
+        .item-5{
+            /* It will overlap*/
+            grid-area: nav;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item-1">1</div>
+        <div class="item item-2">2</div>
+        <div class="item item-3">3</div>
+        <div class="item item-4">4</div>
+        <div class="item item-5">5</div>
+    </div>
+</body>
+</html>
