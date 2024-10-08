@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS Transform</title>
+    <style>
+        .box{
+            height: 50px;
+            width: 50px;
+            border: 6px solid black;
+            background-color: beige ;
+            /* transform: rotate(45deg); */
+            /* transform: rotate(0.25turn); */
+            /* transform: rotate(45deg); */
+            /* transform: skew(5deg); */
+            /* transform: translateX(34px);  you can use % also */
+            transform-origin:0 0 ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            width: 100vw;
+            height: 80vw;
+            border: 6px solid purple; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            box
+        </div>
+    </div>
+</body>
+</html>
