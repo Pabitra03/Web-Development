@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS ANIMATION</title>
+    <style>
+        .container{
+            position: relative;
+            width:100%;
+            height: 80vh;
+            background-color: blue;
+        }
+        .box{
+            height: 121px;
+            width: 121px;
+            background-color: red;
+            border-radius: 70px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            animation: animationX 3s linear infinite , animationY 1s ease-out infinite alternate;
+
+        }
+        @keyframes animationX {
+           from{
+            left: 0;
+           }
+           to{
+            left: 90%;
+           }
+        }
+        @keyframes animationY {
+            from{
+                bottom: 0;
+            }
+            to{
+                bottom: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+        </div>
+    </div>
+</body>
+</html>
