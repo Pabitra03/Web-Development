@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS ANIMATION</title>
+    <style>
+        .container{
+            width: 30vw;
+            height: 80vh;
+            background-color: rgb(15, 208, 144);
+        }
+        .box{
+            border: 4px solid red;
+            display: flex;
+            justify-items:center;
+            align-items: center;
+            width: 54px;
+            height: 45px;
+            /* background-color: aqua; */
+            /* animation-name:apnaCoading;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-out;
+            animation-delay:1s;
+            /* animation-direction: alternate; */
+            /* animation-play-state: paused; */ 
+            animation: apnaCoading 3s ease-in-out 1s infinite , animate 3s ease-in-out 1s infinite;
+        }
+        @keyframes apnaCoading {
+            from{
+                background-color: red;
+            }
+            to{
+                transform: translate(1000px);
+                background-color: yellow;
+            }
+        }
+        @keyframes animate{
+            0%{transform: rotate(100deg);}
+            20%{transform: rotate(200deg);}
+            /* 40%{transform: rotate(220deg);}
+            60%{transform: rotate(250deg);}
+            80%{transform: rotate(300deg);}
+            100%{transform: rotate(360deg);} */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            Box
+        </div>
+    </div>
+</body>
+</html>
