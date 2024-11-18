@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS</title>
+</head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(255, 204, 0);
+}
+
+ul li {
+  display: inline;
+}
+
+ul li a {
+  display: inline-block;
+  font-weight: 700;
+  color: rgb(255, 7, 7);
+  text-decoration: none;
+  padding: 10px;
+}
+
+ul li a:hover {
+  background-color: rgb(0, 255, 55);
+}
+
+.repeat-image {
+  background-image: url('https://images.pexels.com/photos/241316/pexels-photo-241316.jpeg?cs=srgb&dl=alloy-asphalt-auto-241316.jpg&fm=jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 800px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.styled-image {
+  display: block;
+  border-radius: 50%;
+  border: 5px solid rgb(0, 0, 0);
+  outline: 8px dashed rgb(255, 11, 11);
+}
+</style>
+<body>
+<ul>
+  <li><a href="home">Home</a></li>
+  <li><a href="Services">Services</a></li>
+  <li><a href="About">About</a></li>
+  <li><a href="Contact">Contact</a></li>
+</ul>
+
+<div class="repeat-image"></div>
+<br>
+<br>
+<img src="https://th.bing.com/th/id/OIP.rd5DWhAjm5l8EIKcJTefwQHaE7?rs=1&pid=ImgDetMain" class="styled-image">
+<div style="height:1500px;"></div>
+</body>
+</html>

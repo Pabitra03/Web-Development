@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  margin: 0; /* Remove default margin */
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Enable Flexbox */
+  justify-content: center; /* Center the items horizontally */
+  background-color: #3c5e7d;
+  box-shadow: 5px 5px 15px rgba(60, 48, 105, 0.4);
+}
+
+li {
+  position: relative; /* Required for dropdown positioning */
+  margin-right: 5px;
+}
+
+li a {
+  padding: 10px 10px; /* Adjust the size of the box (top-bottom | left-right) */
+  letter-spacing: 2px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 10, 20, 0.7);
+  width: 150px; /* Set a fixed width for the boxes */
+  display: inline-block; /* Ensures the width is applied properly */
+  text-align: center; /* Centers the text inside the box */
+ 
+}
+
+li a:hover {
+  
+  background-color: #7f878f;
+  color: #ebedf0;
+  border: 1px solid white;
+}
+
+.dropdown {
+            display: none; /* Hide dropdown by default */
+            position: absolute; /* Position it absolutely */
+            top: 100%; /* Position below the parent item */
+            left: 0; /* Align to the left */
+            background-color: #40c98c; /* Same background as parent */
+            padding: 0px; /* Add padding to the dropdown */
+            z-index: 1; /* Ensure it appears above other elements */
+            width: 100vw; /* Set the width to the full viewport width */
+   			margin-left: 0;
+            border: 1px solid black; /* Optional: border for the dropdown */
+        }
+
+
+.headline {
+            margin: 0; /* Remove margin from the headline paragraph */
+            font-size: 16px; /* Font size for headlines */
+            
+        }
+
+.headline a {
+    color: white; /* Headline link color */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 10px; /* Padding for dropdown links */
+    display: block; /* Make dropdown links block elements */
+    text-align: left; /* Align text to the left */
+    width: 100%; /* Set the width to 100% of the parent container */
+    border: 1px solid black; /* Optional: border for dropdown links */
+    box-sizing: border-box;/* Include padding and border in the element's total width and height */
+}
+
+.headline a:hover {
+    text-decoration: underline; /* Remove underline on hover */
+    background-color: #878787; /* Background color on hover for dropdown links */
+    color: red;
+   
+    
+}
+
+
+li:hover .dropdown {
+  display: block; /* Show dropdown on hover */
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li>
+    <a href="#news">News</a>
+        <div class="dropdown"> <!-- Dropdown menu -->
+            <p class="headline"><a href="#headline1">Headline 1: Local News Update</a></p>
+            <p class="headline"><a href="#headline2">Headline 2: International News Summary</a>			</p>
+            <p class="headline"><a href="#headline3">Headline 3: Sports News Highlights</a></p>
+        </div>
+  </li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#courses">Courses</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+
+</body>
+</html>
