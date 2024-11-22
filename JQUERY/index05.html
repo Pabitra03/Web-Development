@@ -7,11 +7,21 @@
     <script src="jquery-3.7.1.min.js"></script>
     <script>
         $(document).ready(function(){
-            $()
-        })
+            $("#p1").hover(function(){
+                $(this).css("background-color", "red");
+            });
+            $("input").focus(function(){
+                $(this).css("background-color", "blue");
+            });
+            $("input").blur(function(){
+                $(this).css("background-color" , "yellow");
+            });
+        });
     </script>
 </head>
 <body>
-    
+    <p id="p1">This is a paragraph</p>
+    <label for="name">NAME:-</label>
+    <input type="text" name="name" id="name" placeholder="write your name">
 </body>
 </html>
