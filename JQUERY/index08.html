@@ -1,0 +1,36 @@
+<!-- The fadeIn() , fadeOut() , fadeToggle() , fadeTo() effects -->
+
+ <!-- ● .fadeIn(): Gradually shows a hidden element by increasing its opacity.
+● .fadeOut(): Gradually hides an element by reducing its opacity.
+● .fadeToggle(): Toggles the fade-in/fade-out effect.
+● .fadeTo(): Fades the element to a specified opacity level. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            //Fade In
+            $(".fadein").click(function(){
+                $("p").fadeIn(2000);
+            });
+            //Fade Out
+            $(".fadeout").click(function(){
+                $("p").fadeOut(2000);
+            });
+            //Fade Toggle
+            $(".fadetoggle").click(function(){
+                $("p").fadeToggle(2000);
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>This is a paragraph</p>
+    <button class="fadein">Fade In</button>
+    <button class="fadeout">Fade Out</button>
+    <button class="fadetoggle">Fade Toggle</button>
+</body>
+</html>
