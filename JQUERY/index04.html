@@ -1,0 +1,35 @@
+<!-- Jquery Events -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").dblclick(function(){
+                alert("Button clicked");
+            });
+
+            $(".min").mouseenter(function(){
+                $(this).css("background-color", "yellow");
+            })
+
+            $(".min").mouseleave(function(){
+                $(this).css("background-color", "green");
+            })
+
+            $("div").mousemove(function(){
+                $(this).css("background-color" , "red")
+            })
+        });
+    </script>
+</head>
+<body>
+    <p class="min">This is a paragraph</p>
+    <div>
+        <p>This is another paragraph</p>
+    </div>
+    <button>Click Me</button>
+</body>
+</html>
