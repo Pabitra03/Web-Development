@@ -1,0 +1,33 @@
+<!-- Sliding Effects -->
+<!-- slideToggle() effect. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#flip").click(function(){
+                $("#panel").slideToggle("slow");
+            });
+        });
+    </script>
+    <style>
+        #panel , #flip{
+            padding: 5px;
+            text-align: center;
+            background-color: greenyellow;
+            border: 2px solid blue;
+        }
+        #panel{
+            padding: 50px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="flip">Click to slide the panel down and up</div>
+    <div id="panel">Hello world</div>
+</body>
+</html>
