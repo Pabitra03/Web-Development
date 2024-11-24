@@ -1,0 +1,25 @@
+<!-- Multiple css properties added to animate() method. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("div").animate({
+                    left: '500px',
+                    opacity: '0.2',
+                    height: '200px',
+                    width: '100px'
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <button>Begin the box Animation</button>
+    <div style="background-color: aqua; height: 50px; width: 50px; position: fixed;"></div>
+</body>
+</html>

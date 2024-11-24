@@ -1,0 +1,24 @@
+<!-- jQuery animate() - Queue Functionality -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                var div = $("div");
+                div.animate({height: '300px', opacity: '0.4'}, "slow");
+                div.animate({width:'300px', opacity: '0.8'},"slow");
+                div.animate({height:'100px', opacity: '0.4'}, "slow");
+                div.animate({width: '100px', opacity: '0.8'}, "slow");
+            });
+        });
+    </script>
+</head>
+<body>
+    <button>To Animate</button>
+    <div style="background-color: brown; width: 100px; height: 100px; position: relative;"></div>
+</body>
+</html>
