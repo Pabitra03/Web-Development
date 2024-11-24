@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/color/jquery.color-3.0.0.js" integrity="sha256-nXuT4oV5wsIpHV/V7Ay53Vf/1rg2lqpiGWoP9CRk2tM=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $("#changeColor").click(function(){
+                $("#box").animate({backgroundColor: "#FFD700"}, 1000);
+            });
+            $("#resetColor").click(function(){
+                $("#box").animate({backgroundColor: "#4CAF50"}, 1000);
+            });
+        });
+    </script>
+    <style>
+        #box{
+            width: 200px;
+            height: 200px;
+            background-color: #4CAF50;
+            color: blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #changeColor , #resetColor{
+            padding: 10px;
+            border: 2px solid rgb(0, 47, 255);
+            border-radius: 6px;
+            margin-top: 6px;
+            background-color: rgb(17, 235, 13);
+        }
+    </style>
+</head>
+<body>
+    <div id="box">Color Box</div>
+    <button id="changeColor">Change Color</button>
+    <button id="resetColor">Reset Color</button>
+</body>
+</html>
