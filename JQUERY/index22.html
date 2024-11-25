@@ -1,0 +1,22 @@
+<!--Simple callback with hide() -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("p").hide("slow",function(){
+                    alert("The paragraph is now hidden");
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>This is a simple para</p>
+    <button>Click Me</button>
+</body>
+</html>

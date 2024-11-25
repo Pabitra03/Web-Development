@@ -1,0 +1,44 @@
+<!-- Chainning Animation with Callback -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#start").click(function () {
+                $("#box").slideUp(1000, function () {
+                    $(this).slideDown(1000, function () {
+                        $(this).fadeOut(1000);
+                    });
+                });
+            });
+        });
+    </script>
+    <style>
+        #start{
+            padding: 5px;
+            margin-top: 4px;
+
+        }
+        #start,#box{
+            display: flex;
+            justify-self: center;
+        }
+        #main{
+            width: 200px;
+            height: 200px;
+            /* border: 1px solid red; */
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="box" style="background-color: green; width: 100px; height: 100px;"></div>
+        <button id="start">Click Me</button>
+    </div>
+</body>
+
+</html>
