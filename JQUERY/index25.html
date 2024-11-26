@@ -1,0 +1,26 @@
+<!-- Multiple callbacks in sequence-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#startSequence").click(function(){
+                $("#square").fadeOut(500,function(){
+                    $(this).fadeIn(500, function(){
+                        $(this).slideUp(500,function(){
+                            $(this).slideDown(500);
+                        });
+                    });
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="square" style="background-color: blue; width: 100px; height: 100px;"></div>
+    <button id="startSequence">Click Me</button>
+</body>
+</html>
