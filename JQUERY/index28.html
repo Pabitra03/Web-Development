@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("#main2").hide();
+            });
+            $("#btn2").click(function(){
+                $("#main2").show();
+            });
+            $("#btn3").click(function(){
+                $("#main2").toggle();
+            });
+        });
+    </script>
+    <style>
+        #special {
+            border: 2px solid rgb(6, 0, 128);
+        }
+
+        #main {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        #main2 {
+            width: 100px;
+            height: 100px;
+            border: 2px solid green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #button {
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div id="special">
+        <div id="main">
+            <div id="main2">Effect Box</div>
+        </div>
+        <div id="button">
+            <button class="btn1">Hide</button>
+            <button class="btn2">Show</button>
+            <button class="btn3">Toggle</button>
+            <button class="btn4">Fade Out</button>
+            <button class="btn5">Fade In</button>
+            <button class="btn6">Slide Up</button>
+            <button class="btn7">Slide Down</button>
+            <button class="btn8">Animate</button>
+            <button class="btn9">Reset</button>
+            <button class="btn10">Change Color</button>
+        </div>
+    </div>
+</body>
+</html>
