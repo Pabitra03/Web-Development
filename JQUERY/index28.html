@@ -4,60 +4,95 @@
     <title>Document</title>
     <script src="jquery-3.7.1.min.js"></script>
     <script>
-        $(document).ready(function(){
-            $("#btn1").click(function(){
-                $("#main2").hide();
+        $(document).ready(function () {
+            $("#hide").click(function () {
+                $("#main2").hide("slow");
             });
-            $("#btn2").click(function(){
-                $("#main2").show();
+            $("#show").click(function () {
+                $("#main2").show("slow");
             });
-            $("#btn3").click(function(){
-                $("#main2").toggle();
+            $("#toggle").click(function () {
+                $("#main2").toggle("slow");
+            });
+            $("#fadeout").click(function () {
+                $("#main2").fadeOut("slow");
+            });
+            $("#fadein").click(function () {
+                $("#main2").fadeIn("slow");
+            });
+            $("#slideup").click(function () {
+                $("#main2").slideUp("slow");
+            });
+            $("#slidedown").click(function () {
+                $("#main2").slideDown("slow");
+            });
+            $("#animate").click(function () {
+                $("#main2").animate({ opacity: '0.4px', width: '120px', height: '120px' }, 700);
+            });
+            $("#reset").click(function () {
+                $("#main2").animate({ width: '100px', height: '100px', opacity: '1' });
+                $("#main2").css("background-color", "green");
+            });
+            $("#color").click(function () {
+                $("#main2").css("background-color", "yellow");
             });
         });
     </script>
     <style>
-        #special {
-            border: 2px solid rgb(6, 0, 128);
+        #main {
+            border: 2px solid green;
         }
 
-        #main {
+        .div2 {
             display: flex;
             justify-content: center;
             padding: 10px;
         }
 
         #main2 {
+            border: 2px solid black;
+            background-color: green;
+            border-radius: 6px;
             width: 100px;
             height: 100px;
-            border: 2px solid green;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
-        #button {
-            
+        .btn {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 10px;
+        }
+
+        button {
+            padding: 4px 12px;
+            border-radius: 4px;
+            color: rgb(0, 4, 255);
+            background-color: rgb(187, 185, 185);
+            border: 2px solid rgb(255, 0, 0);
         }
     </style>
 </head>
-
 <body>
-    <div id="special">
-        <div id="main">
+    <div id="main">
+        <div class="div2">
             <div id="main2">Effect Box</div>
         </div>
-        <div id="button">
-            <button class="btn1">Hide</button>
-            <button class="btn2">Show</button>
-            <button class="btn3">Toggle</button>
-            <button class="btn4">Fade Out</button>
-            <button class="btn5">Fade In</button>
-            <button class="btn6">Slide Up</button>
-            <button class="btn7">Slide Down</button>
-            <button class="btn8">Animate</button>
-            <button class="btn9">Reset</button>
-            <button class="btn10">Change Color</button>
+        <div class="btn">
+            <button id="hide">Hide</button>
+            <button id="show">Show</button>
+            <button id="toggle">Toggle</button>
+            <button id="fadeout">Fade Out</button>
+            <button id="fadein">Fade In</button>
+            <button id="slideup">Slide Up</button>
+            <button id="slidedown">Slide Down</button>
+            <button id="animate">Animate</button>
+            <button id="reset">Reset</button>
+            <button id="color">Change Color</button>
         </div>
     </div>
 </body>
