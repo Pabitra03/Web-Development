@@ -1,0 +1,20 @@
+<!-- Set Attributes - attr() -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("#go").attr("href" , "https://www.google.com");
+            });
+        });
+    </script>
+</head>
+<body>
+    <p><a href="https://www.linkedin.com" id="go">Linkedin</a></p>
+    <button>Change</button>
+</body>
+</html>

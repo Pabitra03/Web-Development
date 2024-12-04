@@ -1,0 +1,31 @@
+<!-- Set Content and Attributes -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("#test1").text("Hello World!");
+            });
+            $("#btn2").click(function(){
+                $("#test2").html("<b>Hello World</b>");
+            });
+            $("#btn3").click(function(){
+                $("#test3").val("lucy");
+            });
+        });
+    </script>
+</head>
+<body>
+    <p id="test1">This is a paragraph.</p>
+    <p id="test2">This is another paragraph.</p>
+    <p>Input field: <input type="text" id="test3" value="Cat"></p>
+
+    <button id="btn1">Set Text</button>
+    <button id="btn2">Set Html</button>
+    <button id="btn3">Set Value</button>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!-- Get Attributes - attr() -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                alert($("#go").attr("href"));
+            });
+        });
+    </script>
+</head>
+<body>
+    <p><a id="go" href="https://www.google.com">Google</a></p>
+    <button>Show href Value</button>
+</body>
+</html>
