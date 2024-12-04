@@ -1,0 +1,22 @@
+<!-- Return a CSS Property. -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                alert("Background color = " + $("p").css("background-color"));
+            });
+        });
+    </script>
+ </head>
+ <body>
+    <p style="background-color: red;">This is a paragraph.</p>
+    <p style="background-color: aqua;">This is a paragraph</p>
+    <p style="background-color: blue;">This is a paragraph.</p>
+
+    <button>Return</button>
+ </body>
+ </html>
