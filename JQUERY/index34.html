@@ -1,0 +1,39 @@
+<!-- Deleting HTML Elements -->
+<!-- remove() , empty() -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("#div1").remove();
+            });
+            $("#btn2").click(function(){
+                $("#div2").empty();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="div1" style="height: 100px; width: 300px; border: 1px solid black;">
+        This is some text in the div.
+        <p>This is a paragraph in the div.</p>
+        <p>This is another paragraph in the div.</p>
+    </div>
+    <br>
+    <button id="btn1">Remove div element</button>
+
+    <br>
+    <br>
+
+    <div id="div2" style="height: 100px; width: 300px; border: 1px solid black;">
+        This is some text in the div.
+        <p>This is a paragraph in the div.</p>
+        <p>This is another paragraph in the div.</p>
+    </div>
+    <br>
+    <button id="btn2">Empty the div elememt</button>
+</body>
+</html>
