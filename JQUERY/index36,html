@@ -1,0 +1,43 @@
+<!-- jQuery with css -->
+<!-- addClass() , removeClass() , toggleClass() -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#b1").click(function(){
+                $("h1 , p").addClass("green");
+                $("div").addClass("size");
+            });
+            $("#b2").click(function(){
+                $("h1 , p").removeClass("green");
+                $("div").removeClass("size");
+            });
+            $("#b3").click(function(){
+                $("h1 , p").toggleClass("green");
+                $("div").toggleClass("size");
+            });
+        });
+    </script>
+    <style>
+        .size{
+            font-size: xx-small;
+        }
+        .green{
+            color: green;
+        }
+    </style>
+ </head>
+ <body>
+    <h1>This ts the first heading!</h1>
+    <h2>This is the second heading!</h2>
+    <p>This is the first paragraph.</p>
+    <p>This is the second paragraph.</p>
+    <div>This is a piece of vital information.</div><br>
+    <button id="b1">Push classes in elements</button>
+    <button id="b2">Delete css classes from elements</button>
+    <button id="b3">Toggle classes</button>
+ </body>
+ </html>
