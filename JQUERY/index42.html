@@ -1,5 +1,4 @@
-<!-- jQuery Dimensions -->
- <!-- width() and height() -->
+<!-- More width() and height() -->
  <!DOCTYPE html>
  <html lang="en">
  <head>
@@ -9,16 +8,16 @@
         $(document).ready(function(){
             $("button").click(function(){
                 var txt ="";
-            txt += "width of div is:- " + $("#div1").width()+ "</br>";
-            txt += "height of div is:- " + $("#div1").height();
-            $("#div1").html(txt);
+                txt += "Document width/height: " + $(document).width();
+                txt += " x " + $(document).height() + "\n";
+                txt += "Window width/height: " + $(window).width();
+                txt += " x " + $(window).height();
+                alert(txt);
             });
         });
     </script>
  </head>
  <body>
-    <div id="div1" style="width: 300px; height: 100px; border: 2px solid black;"></div>
-    <br>
     <button>Display Dimension</button>
  </body>
  </html>

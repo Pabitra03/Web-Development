@@ -1,0 +1,23 @@
+<!-- innerWidth() and innerHeight() -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                var txt ="";
+                txt += "Inner width: " + $("#div1").innerWidth() + "</br>";
+                txt += "Inner height: " + $("#div1").innerHeight();
+                $("#div1").html(txt);
+            });
+        });
+    </script>
+ </head>
+ <body>
+    <div id="div1" style="width: 300px;height: 100px;border: 1px solid black; padding: 10px;"></div>
+    <br>
+    <button>Display</button>
+ </body>
+ </html>
