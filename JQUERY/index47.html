@@ -1,0 +1,73 @@
+<!-- Siblings -->
+ <!-- siblings()
+next(),
+nextAll(),
+nextUntil(),
+prev(),
+prevAll(),
+prevUntil() -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>jQuery Traversal Methods</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Highlight siblings of the selected element
+            $("#siblingsBtn").click(function () {
+                $(".item:eq(2)").siblings().addClass("highlight");
+            });
+
+            // Highlight the next sibling
+            $("#nextBtn").click(function () {
+                $(".item:eq(2)").next().addClass("highlight");
+            });
+
+            // Highlight all next siblings
+            $("#nextAllBtn").click(function () {
+                $(".item:eq(2)").nextAll().addClass("highlight");
+            });
+
+            // Highlight next siblings until a specific element
+            $("#nextUntilBtn").click(function () {
+                $(".item:eq(2)").nextUntil(".item:eq(4)").addClass("highlight");
+            });
+
+            // Highlight the previous sibling
+            $("#prevBtn").click(function () {
+                $(".item:eq(2)").prev().addClass("highlight");
+            });
+
+            // Highlight all previous siblings
+            $("#prevAllBtn").click(function () {
+                $(".item:eq(2)").prevAll().addClass("highlight");
+            });
+
+            // Highlight previous siblings until a specific element
+            $("#prevUntilBtn").click(function () {
+                $(".item:eq(2)").prevUntil(".item:eq(0)").addClass("highlight");
+            });
+        });
+    </script>
+    <style>
+        .highlight { background-color: yellow; }
+    </style>
+</head>
+<body>
+    <ul id="list">
+        <li class="item">Item 1</li>
+        <li class="item">Item 2</li>
+        <li class="item">Item 3</li>
+        <li class="item">Item 4</li>
+        <li class="item">Item 5</li>
+    </ul>
+    <button id="siblingsBtn">Highlight Siblings</button>
+    <button id="nextBtn">Highlight Next</button>
+    <button id="nextAllBtn">Highlight All Next</button>
+    <button id="nextUntilBtn">Highlight Until Item 5</button>
+    <button id="prevBtn">Highlight Previous</button>
+    <button id="prevAllBtn">Highlight All Previous</button>
+    <button id="prevUntilBtn">Highlight Until Item 1</button>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!-- parentsUntil() -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function(){
+                $("span").parentsUntil("div").css({ "color": "red", "border": "2px solid red" });
+            });
+        });
+    </script>
+    <style>
+        .ancestors * {
+            display: block;
+            border: 2px solid lightgrey;
+            color: lightgrey;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+</head>
+<body class="ancestors"> body (great-great-grandparent)
+    <div style="width:500px;">div (great-grandparent)
+        <ul>ul (grandparent)
+            <li>li (direct parent)
+                <span>span</span>
+            </li>
+        </ul>
+    </div>
+    <button style="background-color: aqua; color: red; border: 1px solid black;">CLick Me</button>
+</body>
+</html>
