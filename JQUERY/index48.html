@@ -1,0 +1,64 @@
+<!-- The first(), last(), eq(), filter() and not() Methods -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery Methods Demo</title>
+  <script src="jquery-3.7.1.min.js"></script>
+  
+  <script>
+    $(document).ready(function () {
+      // Highlight the first element
+      $('#highlight-first').click(function () {
+        $('.item').first().addClass('highlight');
+      });
+
+      // Highlight the last element
+      $('#highlight-last').click(function () {
+        $('.item').last().addClass('highlight');
+      });
+
+      // Highlight a specific element (e.g., the third one)
+      $('#highlight-third').click(function () {
+        $('.item').eq(2).addClass('highlight'); // 0-based index
+      });
+
+      // Highlight even-indexed items using filter
+      $('#highlight-even').click(function () {
+        $('.item').filter(':even').addClass('highlight'); // 0-based index, :even matches 0, 2, 4...
+      });
+
+      // Remove highlight from even-indexed items using not
+      $('#remove-highlight-even').click(function () {
+        $('.item').not(':odd').removeClass('highlight');
+      });
+    });
+  </script>
+  <style>
+    .highlight {
+      background-color: yellow;
+    }
+    .item {
+      padding: 10px;
+      border: 1px solid black;
+      margin: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>jQuery Selector Methods Demo</h1>
+  <div class="item">Item 1</div>
+  <div class="item">Item 2</div>
+  <div class="item">Item 3</div>
+  <div class="item">Item 4</div>
+  <div class="item">Item 5</div>
+
+  <button id="highlight-first">Highlight First</button>
+  <button id="highlight-last">Highlight Last</button>
+  <button id="highlight-third">Highlight Third (eq)</button>
+  <button id="highlight-even">Highlight Even Items (filter)</button>
+  <button id="remove-highlight-even">Remove Highlight from Even Items (not)</button>
+</body>
+</html>
